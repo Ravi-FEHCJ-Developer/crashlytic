@@ -1,4 +1,4 @@
-package dev.robingenz.capacitorjs.demo.firebaseplugins;
+package com.lattice.glowsun;
 
 import com.getcapacitor.BridgeActivity;
 

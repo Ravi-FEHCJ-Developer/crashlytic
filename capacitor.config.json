@@ -1,5 +1,5 @@
 {
-  "appId": "dev.robingenz.capacitorjs.demo.firebaseplugins",
+  "appId": "com.lattice.glowsun",
   "appName": "capacitor-firebase-plugin-demo",
   "bundledWebRuntime": false,
   "npmClient": "npm",

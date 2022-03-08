@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FirebasePerformance } from '@robingenz/capacitor-firebase-performance';
+import { FirebaseCrashlytics } from '@capacitor-community/firebase-crashlytics';
+import { GlobalErrorHandlerService } from '../../core/services/global-error-handler/global-error-handler.service';
 
 @Component({
   selector: 'app-firebase-performance',
@@ -7,28 +8,23 @@ import { FirebasePerformance } from '@robingenz/capacitor-firebase-performance';
   styleUrls: ['./firebase-performance.page.scss'],
 })
 export class FirebasePerformancePage {
-  private readonly githubUrl =
-    'https://github.com/robingenz/capacitor-firebase-performance';
+  public async crash(): Promise<void> {
 
-  constructor() {}
+    // // display on key tab
+    //   await FirebaseCrashlytics.setContext({
+    //     key: 'performance page',
+    //     value: 'performance page',
+    //     type: 'string'
+    //   });
 
-  public openOnGithub(): void {
-    window.open(this.githubUrl, '_blank');
-  }
-
-  public async startTrace(): Promise<void> {
-    await FirebasePerformance.startTrace({ traceName: 'test_trace' });
-  }
-
-  public async stopTrace(): Promise<void> {
-    await FirebasePerformance.stopTrace({ traceName: 'test_trace' });
-  }
-
-  public async incrementMetric(): Promise<void> {
-    await FirebasePerformance.incrementMetric({
-      traceName: 'test_trace',
-      metricName: 'item_cache_hit',
-      incrementBy: 1,
-    });
+    //   await FirebaseCrashlytics.setUserId({ userId: '3' });
+    //   await FirebaseCrashlytics.setEnabled({enabled: false});
+    //   await FirebaseCrashlytics.recordException({message: 'APP.'});   // expansion small title
+    //   // await (await FirebaseCrashlytics.isEnabled()).enabled;
+    //   await (await FirebaseCrashlytics.didCrashDuringPreviousExecution()).crashed;
+    //   await FirebaseCrashlytics.sendUnsentReports();
+    //   // await FirebaseCrashlytics.deleteUnsentReports();
+    //   // await FirebaseCrashlytics.addLogMessage({ message: 'app is crashed' });
+    //   await FirebaseCrashlytics.crash({ message: 'Test' });
   }
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "846417727059",
+    "project_id": "fir-76b88",
+    "storage_bucket": "fir-76b88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846417727059:android:1636829580e348b3dd80a6",
+        "android_client_info": {
+          "package_name": "com.lattice.glowsun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846417727059-349a5fquc7g8on2qut8tks4otcmv6qc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoiDdbzg6WcnipWPa-IRGwfu5DdQOhAxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846417727059-349a5fquc7g8on2qut8tks4otcmv6qc9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

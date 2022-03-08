@@ -1,44 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { Platform } from '@ionic/angular';
-import { FirebaseApp } from '@robingenz/capacitor-firebase-app';
+import { FirebaseCrashlytics } from '@capacitor-community/firebase-crashlytics';
+import { GlobalErrorHandlerService } from '../../core/services/global-error-handler/global-error-handler.service';
+// import * as StackTrace from 'stacktrace-js';
 
 @Component({
   selector: 'app-firebase-app',
   templateUrl: './firebase-app.page.html',
   styleUrls: ['./firebase-app.page.scss'],
 })
-export class FirebaseAppPage implements OnInit {
-  public name = '';
-  public apiKey = '';
-  public applicationId = '';
-  public databaseUrl = '';
-  public gcmSenderId = '';
-  public projectId = '';
-  public storageBucket = '';
+export class FirebaseAppPage
+{
+  constructor( private globalErrorHandlerService: GlobalErrorHandlerService) {}
 
-  private readonly githubUrl =
-    'https://github.com/robingenz/capacitor-firebase-app';
+  public async crash(): Promise<void> {
 
-  constructor(private readonly platform: Platform) {}
+  //   // display on key tab
+  //     await FirebaseCrashlytics.setContext({
+  //       key: 'id',
+  //       value: '1',
+  //       type: 'string'
+  //     });
 
-  public ngOnInit(): void {
-    if (!this.platform.is('capacitor')) {
-      return;
-    }
-    FirebaseApp.getName().then((result) => {
-      this.name = result.name;
-    });
-    FirebaseApp.getOptions().then((result) => {
-      this.apiKey = result.apiKey;
-      this.applicationId = result.applicationId;
-      this.databaseUrl = result.databaseUrl;
-      this.gcmSenderId = result.gcmSenderId;
-      this.projectId = result.projectId;
-      this.storageBucket = result.storageBucket;
-    });
-  }
 
-  public openOnGithub(): void {
-    window.open(this.githubUrl, '_blank');
+  // await FirebaseCrashlytics.setUserId({ userId: '1' });
+  // await FirebaseCrashlytics.setEnabled({enabled: false});
+  // // await FirebaseCrashlytics.recordException({message: 'APP.'});   // expansion small title
+  // // await (await FirebaseCrashlytics.isEnabled()).enabled;
+  // await (await FirebaseCrashlytics.didCrashDuringPreviousExecution()).crashed;
+  // await FirebaseCrashlytics.sendUnsentReports();
+  // // await FirebaseCrashlytics.deleteUnsentReports();
+  // // await FirebaseCrashlytics.addLogMessage({ message: 'app is crashed' });
+  // await FirebaseCrashlytics.crash({ message: 'Test' });
   }
 }

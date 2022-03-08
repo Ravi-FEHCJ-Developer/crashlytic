@@ -73,6 +73,7 @@
     "prettier": "2.5.1",
     "protractor": "7.0.0",
     "puppeteer": "13.4.1",
+    "stacktrace-js": "2.0.2",
     "ts-node": "10.6.0",
     "typescript": "4.5.5"
   },
